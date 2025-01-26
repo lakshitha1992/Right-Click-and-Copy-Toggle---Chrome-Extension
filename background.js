@@ -1,3 +1,4 @@
+// Updated background.js
 let isEnabled = false;
 
 chrome.action.onClicked.addListener((tab) => {
@@ -11,6 +12,6 @@ chrome.action.onClicked.addListener((tab) => {
     chrome.action.setTitle({ tabId: tab.id, title: "Disable Protection Bypass" });
   } else {
     chrome.action.setTitle({ tabId: tab.id, title: "Enable Protection Bypass" });
-    chrome.tabs.reload(tab.id); // Reload the page to restore original behavior
+    chrome.tabs.reload(tab.id); // Reload to reset original behavior
   }
 });
